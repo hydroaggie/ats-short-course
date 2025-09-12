@@ -288,7 +288,8 @@
     <ParameterList name="evaluators">
       <ParameterList name="surface-water_source" type="ParameterList">
         <Parameter name="evaluator type" type="string" value="additive evaluator"/>
-        <Parameter name="dependencies" type="Array(string)" value="{surface-water_source_rain_mol}"/>
+        <!-- <Parameter name="dependencies" type="Array(string)" value="{surface-water_source_rain_mol}"/> -->
+                  <Parameter name="dependencies" type="Array(string)" value="{surface-water_source_rain_mol, surface-gate_flow}"/>
       </ParameterList>
       <ParameterList name="surface-water_source_rain" type="ParameterList">
         <Parameter name="evaluator type" type="string" value="independent variable"/>
@@ -314,7 +315,7 @@
         <Parameter name="evaluator type" type="string" value="gate structure"/>
         <Parameter name="gate intake region" type="string" value="gate intake area"/>
         <Parameter name="storage area region" type="string" value="detention pond"/>
-        <!-- <Parameter name="gate close stage" type="double" value="7.40"/> -->
+        <Parameter name="gate close stage" type="double" value="7.40"/>
         <Parameter name="is ponded depth function" type="bool" value="true"/>
         <ParameterList name="function" type="ParameterList">
           <ParameterList name="function-tabular" type="ParameterList">
